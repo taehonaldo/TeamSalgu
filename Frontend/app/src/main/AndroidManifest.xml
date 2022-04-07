@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".chatting.ChattingRoomFilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chatting.ChattingRoomManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chatting.ChattingRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".groupmatching.GroupMatchingPriorityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".groupmatching.GroupMatchingFilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chatting.ChattingRoomListActivity"
+            android:exported="false" />
+        <activity
             android:name=".GroupFilterActivity"
             android:exported="false" />
         <activity
@@ -23,6 +41,7 @@
             android:theme="@style/Theme.MyApplication.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

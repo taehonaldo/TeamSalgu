@@ -3,23 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/drawable/gradation_black.xml" value="0.1765" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/drawable/ic_cycle.xml" value="0.219" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/drawable/ic_mate.xml" value="0.219" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/drawable/logo.xml" value="0.219" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/drawable/round_rectangle_fill.xml" value="0.255" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/drawable/round_rectangle_line.xml" value="0.222" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/activity_group_filter.xml" value="0.24947916666666667" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/activity_home.xml" value="0.2006340579710145" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/activity_recommendation.xml" value="0.23143115942028986" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/content_recommendation.xml" value="0.23143115942028986" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/fragment_first.xml" value="0.2" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/fragment_first2.xml" value="0.23143115942028986" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/fragment_recommendation.xml" value="0.264" />
-        <entry key="..\:/Project/teamDTC/Frontend/app/src/main/res/layout/item_card.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_chatting_room.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_group_filter.xml" value="0.2942708333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.20783081054687497" />
+        <entry key="app/src/main/res/layout/content_chatting_room.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_chatting_room_list.xml" value="0.2250091552734375" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.1296875" />
+        <entry key="app/src/main/res/layout/fragment_first2.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/fragment_second2.xml" value="0.2" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2945" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK" />
 </project>
