@@ -1,2 +1,4 @@
 # ignore .env file
+node_modules
+package-lock.json
 .env
