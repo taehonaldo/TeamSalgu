@@ -20,12 +20,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    user_id: {
-      type: DataTypes.INTEGER
-    },
-    group_id: {
-      type: DataTypes.INTEGER
-    },
     role: {
       type: DataTypes.STRING
     }
@@ -34,5 +28,9 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'group_join',
     tableName: 'group_join'
   });
+  group_join.associate = models =>{
+    group_join.belongsTo(models.User, {foreignKey:"user_id", targetKey:"user_id"});
+    group_join.belongsTo(models.Group, {foreignKey:"group_id", targetKey:"group_id"});
+  }
   return group_join;
 };

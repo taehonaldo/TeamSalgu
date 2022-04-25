@@ -20,18 +20,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    group_id: {
-      type: DataTypes.INTEGER
-    },
-    sender_id: {
-      type: DataTypes.INTEGER
-    },
-    receiver_id: {
-      type: DataTypes.INTEGER
-    },
-    file_info_id: {
-      type: DataTypes.INTEGER
-    },
     text: {
       type: DataTypes.TEXT
     },
@@ -43,5 +31,13 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Message',
     tableName: 'Message'
   });
+
+  Message.associate = models =>{
+    Message.belongsTo(models.User, {foreignKey: "sender_id", targetKey: "user_id"});
+    Message.belongsTo(models.User, {foreignKey: "receiver_id", targetKey: "user_id"});
+    Message.belongsTo(models.Group, {foreignKey:"group_id", targetKey:"group_id"});
+    Message.belongsTo(models.file_info, {foreignKey:"file_info_id", targetKey:"file_info_id"})
+  }
+
   return Message;
 };

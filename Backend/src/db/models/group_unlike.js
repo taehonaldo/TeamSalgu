@@ -31,5 +31,10 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'group_unlike',
     tableName: 'group_unlike'
   });
+  
+  group_unlike.associate = models =>{
+    group_unlike.belongsTo(models.User, {foreignKey:"user_id", targetKey:"user_id"});
+    group_unlike.belongsTo(models.Group, {foreignKey:"group_id", targetKey:"group_id"});
+  }
   return group_unlike;
 };

@@ -20,12 +20,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    group_image_id: {
-      type: DataTypes.INTEGER
-    },
-    sports_id: {
-      type: DataTypes.INTEGER
-    },
     group_name: {
       type: DataTypes.STRING(255)
     },
@@ -55,5 +49,13 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Group',
     tableName: 'GROUP'
   });
+
+  Group.associate = models => {
+    Group.hasMany(models.Group, {foreignKey:"group_id", sourceKey:"group_id"});
+    Group.belongsTo(models.file_info, {foreginKey:"group_image_id", targetKey: "file_info_id"});
+    Group.belongsTo(models.sports, {foreginKey:"sports_id", targetKey: "sports_id"});
+
+  }
+
   return Group;
 };

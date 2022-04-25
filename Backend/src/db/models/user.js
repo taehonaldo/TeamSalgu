@@ -20,9 +20,6 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    profile_picture_image_id: {
-      type: DataTypes.INTEGER
-    },
     last_password_change: {
       type: DataTypes.DATE
     },
@@ -46,5 +43,13 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User',
     tableName: 'User'
   });
+
+  User.associate = models => {
+    User.hasMany(models.User, {foreignKey : "user_id", sourceKey: "user_id"});
+    User.hasMany(models.User, {foreignKey : "sender_id", sourceKey: "user_id"});
+    User.hasMany(models.User, {foreignKey : "receiver_id", sourceKey: "user_id"});
+    User.belongsTo(models.file_info, {foreginKey:"profile_picture_image_id", targetKey: "file_info_id"})
+  };
+
   return User;
 };

@@ -6,7 +6,7 @@ const development = {
     "password": "1234",
     "database": "sports_mate",
     "host": "127.0.0.1",
-    "port": 3307,
+    "port": 3306,
     "dialect": "mysql"
 }
 

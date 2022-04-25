@@ -37,5 +37,11 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'file_info',
     tableName: 'file_info'
   });
+
+  file_info.associate = models =>{
+    file_info.hasOne(models.file_info, {foreginKey:"group_image_id", sourceKey: "file_info_id"})
+    file_info.hasOne(models.file_info, {foreginKey:"profile_picture_image_id", sourceKey: "file_info_id"})
+    file_info.hasOne(models.file_info, {foreignKey:"file_info_id", sourceKey:"file_info_id"})
+  }
   return file_info;
 };
