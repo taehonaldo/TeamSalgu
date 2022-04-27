@@ -1,7 +1,24 @@
-var chat = {}
+const models = require('../db/models');
 
-chat.getChatGroups = async function() {
-    const chatGroups = {}
+exports.getChatGroups = async function(userId) {
 }
 
-module.exports = chat;
+exports.getChatGroupMembers = async function() {
+    
+} 
+
+exports.createChatGroup = async function() {
+
+}
+
+exports.updateChatGroup = async function() {
+
+}
+
+exports.leaveChatGroup = async function() {
+
+}
+
+exports.enterChatGroup = async function() {
+
+}
