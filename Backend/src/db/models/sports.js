@@ -25,13 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'sports',
     tableName: 'sports'
   });
-
-  sports.associate = models =>{
-    sports.hasOne(models.sports, {foreginKey:"sports_id", sourceKey: "sports_id"})
-  }
 
   return sports;
 };

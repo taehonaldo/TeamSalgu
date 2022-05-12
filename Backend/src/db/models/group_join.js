@@ -25,12 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'group_join',
     tableName: 'group_join'
   });
-  group_join.associate = models =>{
-    group_join.belongsTo(models.User, {foreignKey:"user_id", targetKey:"user_id"});
-    group_join.belongsTo(models.Group, {foreignKey:"group_id", targetKey:"group_id"});
-  }
+
   return group_join;
 };

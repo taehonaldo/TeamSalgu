@@ -28,16 +28,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'Message',
-    tableName: 'Message'
+    tableName: 'message'
   });
-
-  Message.associate = models =>{
-    Message.belongsTo(models.User, {foreignKey: "sender_id", targetKey: "user_id"});
-    Message.belongsTo(models.User, {foreignKey: "receiver_id", targetKey: "user_id"});
-    Message.belongsTo(models.Group, {foreignKey:"group_id", targetKey:"group_id"});
-    Message.belongsTo(models.file_info, {foreignKey:"file_info_id", targetKey:"file_info_id"})
-  }
 
   return Message;
 };

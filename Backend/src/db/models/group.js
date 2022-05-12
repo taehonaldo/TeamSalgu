@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.file_info, {foreginKey:"group_image_id", targetKey: "file_info_id"});
     }
   }
   Group.init({
@@ -46,16 +47,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'Group',
-    tableName: 'GROUP'
+    tableName: 'group_',
   });
-
-  Group.associate = models => {
-    Group.hasMany(models.Group, {foreignKey:"group_id", sourceKey:"group_id"});
-    Group.belongsTo(models.file_info, {foreginKey:"group_image_id", targetKey: "file_info_id"});
-    Group.belongsTo(models.sports, {foreginKey:"sports_id", targetKey: "sports_id"});
-
-  }
 
   return Group;
 };

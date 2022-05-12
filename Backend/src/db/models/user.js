@@ -40,16 +40,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'User',
-    tableName: 'User'
+    tableName: 'user'
   });
-
-  User.associate = models => {
-    User.hasMany(models.User, {foreignKey : "user_id", sourceKey: "user_id"});
-    User.hasMany(models.User, {foreignKey : "sender_id", sourceKey: "user_id"});
-    User.hasMany(models.User, {foreignKey : "receiver_id", sourceKey: "user_id"});
-    User.belongsTo(models.file_info, {foreginKey:"profile_picture_image_id", targetKey: "file_info_id"})
-  };
 
   return User;
 };
