@@ -28,7 +28,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    tableName: 'message'
+    tableName: 'message',
+    underscored: true,
+    timestamps: true,
   });
 
   return Message;

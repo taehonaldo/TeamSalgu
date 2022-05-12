@@ -25,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    tableName: 'sports'
+    tableName: 'sports',
+    underscored: true,
+    timestamps: true,
   });
 
   return Sports;

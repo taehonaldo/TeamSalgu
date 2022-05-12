@@ -28,7 +28,9 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    tableName: 'group_unlike'
+    tableName: 'group_unlike',
+    underscored: true,
+    timestamps: true,
   });
   
   return GroupUnlike;
