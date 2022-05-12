@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.file_info, {foreginKey:"group_image_id", targetKey: "file_info_id"});
+      this.belongsTo(models.file_info, {foreignKey:'group_image_id'});
     }
   }
   Group.init({
@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     tableName: 'group_',
+    underscored: true
   });
 
   return Group;
