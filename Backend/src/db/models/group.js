@@ -48,7 +48,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     tableName: 'group_',
-    underscored: true
+    underscored: true,
+    timestamps: true
   });
 
   return Group;

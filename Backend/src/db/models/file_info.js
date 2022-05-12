@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const group = require('./group');
 module.exports = (sequelize, DataTypes) => {
   class file_info extends Model {
     /**
@@ -11,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here 
+      // define association here
+      this.hasOne(models.Group, {foreignKey: "group_image_id", sourceKey: "file_info_id"});
     }
   }
   file_info.init({
