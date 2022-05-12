@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class file_info extends Model {
+  class FileInfo extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasOne(models.Group, {foreignKey: "group_image_id", sourceKey: "file_info_id"});
     }
   }
-  file_info.init({
+  FileInfo.init({
     file_info_id: {
       allowNull: false,
       autoIncrement: true,
@@ -39,5 +39,5 @@ module.exports = (sequelize, DataTypes) => {
     underscored: true
   });
 
-  return file_info;
+  return FileInfo;
 };

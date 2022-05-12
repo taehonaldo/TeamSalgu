@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.file_info, {foreignKey:'group_image_id'});
+      this.belongsTo(models.FileInfo, {foreignKey:'group_image_id'});
+      this.belongsTo(models.Sports, {foreignKey: 'sports_id'});
     }
   }
   Group.init({

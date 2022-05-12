@@ -16,9 +16,7 @@ const groupService = require('../services/groupService')
 
 exports.getGroupList = async (req, res) =>{
     try{
-        console.log(req.body);
         let rooms = await groupService.getGroupList(req.body);
-        console.log(rooms);
         return res.json(rooms);
     } catch(err){
         return res.status(500).json(err);
