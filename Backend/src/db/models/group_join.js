@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class group_join extends Model {
+  class GroupJoin extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  group_join.init({
+  GroupJoin.init({
     group_join_id: {
       allowNull: false,
       autoIncrement: true,
@@ -28,5 +28,5 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'group_join'
   });
 
-  return group_join;
+  return GroupJoin;
 };

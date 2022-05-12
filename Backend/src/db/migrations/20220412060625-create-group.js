@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      group_image_id: {
+      file_info_id: {
         type: Sequelize.INTEGER
       },
       sports_id: {

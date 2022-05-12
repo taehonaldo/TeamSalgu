@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class group_unlike extends Model {
+  class GroupUnlike extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  group_unlike.init({
+  GroupUnlike.init({
     group_unlike_id: {
       allowNull: false,
       autoIncrement: true,
@@ -31,5 +31,5 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'group_unlike'
   });
   
-  return group_unlike;
+  return GroupUnlike;
 };
