@@ -1,13 +1,15 @@
 const models = require('../db/models');
 
-exports.getChatGroups = async function() {
-    let result = await models.Group.findAll({});
+exports.getChatGroups = async function(groupId) {
+    let result = await models.Group.findAll({
+        where : { group_id : groupId }
+    });
     return result;
 }
 
 exports.getChatGroupMembers = async function(groupId) {
     try {
-        let groupJoins= await models.GroupJoin.findAll({where: { group_id : groupId}});
+        let groupJoins= await models.GroupJoin.findAll({where: { group_id : groupId }});
         
     } catch (error) {
         
@@ -38,7 +40,7 @@ exports.createChatGroup = async function(userId, group) {
             location: location, 
             min_age: group.minAge,
             max_age: group.maxAge,
-            sports_id: sports.sportsId
+            sports_id: sports.sports_id
         }, {
             include: [{
                 model: models.Sports
