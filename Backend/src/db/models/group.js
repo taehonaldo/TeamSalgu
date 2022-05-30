@@ -11,7 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.file_info, {foreignKey:'group_image_id'});
+      this.belongsTo(models.FileInfo, {foreignKey:'group_image_id'});
+      this.belongsTo(models.Sports, {foreignKey: 'sports_id'});
     }
   }
   Group.init({
@@ -22,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     group_name: {
-      type: DataTypes.STRING(255)
+      type: DataTypes.STRING(255),
+      allowNull: false,
     },
     participants: {
       type: DataTypes.INTEGER
@@ -44,6 +46,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     max_age: {
       type: DataTypes.INTEGER
+    },
+    gender: {
+      type: DataTypes.STRING(255)
     },
   }, {
     sequelize,

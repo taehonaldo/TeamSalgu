@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class group_join extends Model {
+  class GroupJoin extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,9 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.User, {foreignKey: 'user_id'});
+      this.belongsTo(models.Group, {foreignKey: 'group_id'});
     }
   }
-  group_join.init({
+  GroupJoin.init({
     group_join_id: {
       allowNull: false,
       autoIncrement: true,
@@ -30,5 +32,5 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: true,
   });
 
-  return group_join;
+  return GroupJoin;
 };

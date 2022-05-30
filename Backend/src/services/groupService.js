@@ -4,13 +4,19 @@ const models = require("../db/models");
 exports.getGroupList = async function(body) {
     let {user_id, select_sports, distance, datetime, gender, min_age, max_age, priority} = body;
 
-    console.log(models.Group.findAll());
+    const group = await models.Group.findAll({where: ""});
 
-    models.Group.findAll()
-    .then(result => {
-        res.json(result)
-    })
-    .catch( err => {
-        throw Error(err);
-    })
+    console.log(group);
+
+    return group;
+
+    // return await models.Group.findAll()
+    // .then(result => {
+    //     console.log("hi2");
+    //     res.json(result)
+    // })
+    // .catch( err => {
+    //     console.log("hi3");
+    //     throw Error(err);
+    // })
 }

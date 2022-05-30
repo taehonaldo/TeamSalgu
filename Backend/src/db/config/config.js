@@ -3,7 +3,7 @@ const env = process.env;
 
 const development = {
     "username": "root",
-    "password": "1234",
+    "password": "rlaekdls96!",
     "database": "sports_mate",
     "host": "127.0.0.1",
     "port": 3306,

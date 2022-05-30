@@ -4,7 +4,7 @@ const {
 } = require('sequelize');
 const group = require('./group');
 module.exports = (sequelize, DataTypes) => {
-  class file_info extends Model {
+  class FileInfo extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here 
     }
   }
-  file_info.init({
+  FileInfo.init({
     file_info_id: {
       allowNull: false,
       autoIncrement: true,
@@ -40,5 +40,5 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: true,
   });
 
-  return file_info;
+  return FileInfo;
 };
