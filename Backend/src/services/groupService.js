@@ -40,3 +40,25 @@ exports.getGroupList = async function(body) {
 
     return group;
 }
+
+exports.signUp = async function(body) {
+    let {user_id, group_id} = body;
+
+    const groupDB = await models.Group.findAll({
+        where:{
+            group_id: group_id
+        }
+    });
+
+
+    group = groupDB.map(element => element.dataValues);
+    console.log(group);
+
+    if(!group.accessability){
+        return "대기"
+    } 
+    else{
+        return "가입성공"
+
+    }
+}

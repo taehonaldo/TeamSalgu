@@ -25,8 +25,9 @@ exports.getGroupList = async (req, res) =>{
 
 exports.signUp = async (req, res) =>{
     try{
-        let rooms = await groupService.getGroupList(req.body);
-        return res.json(rooms);
+        console.log("hi");
+        let status = await groupService.signUp(req.body);
+        return res.json(status);
     } catch(err){
         return res.status(500).json(err);
     }
