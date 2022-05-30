@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsTo(models.User, {foreignKey: 'user_id'});
       this.belongsTo(models.Group, {foreignKey: 'group_id'});
+
     }
   }
   GroupJoin.init({

@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsTo(models.FileInfo, {foreignKey:'group_image_id'});
       this.belongsTo(models.Sports, {foreignKey: 'sports_id'});
+
+      this.hasMany(models.GroupJoin, {foreignKey: 'group_id'})
     }
   }
   Group.init({
