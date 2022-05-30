@@ -1,7 +1,7 @@
 const chatService = require('../services/chatService')
 
 exports.getChatGroups = async(req, res) => {
-    let groups = await chatService.getChatGroups();
+    let groups = await chatService.getChatGroups(req.params.groupId);
     return res.status(200).json(groups);
 }
 
